@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string("name");
             $table->smallInteger("age");
             $table->string("email")->nullable();
-            $table->date("birth_date");
+            $table->date("birthdate");
             $table->boolean("status")->default(1);
             $table->timestamps();
         });

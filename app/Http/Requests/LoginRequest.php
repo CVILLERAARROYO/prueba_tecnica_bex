@@ -32,6 +32,12 @@ class LoginRequest extends FormRequest
         ];
     }
 
+    /**
+     * Se implementa para evitar una redireccion y enviar directamente
+     * los mensajes de error al response
+     * @param Validator $validator
+     * @return void
+     */
     protected function failedValidation(Validator $validator)
     {
         throw new HttpResponseException(response()->json([
